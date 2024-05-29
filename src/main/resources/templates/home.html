@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Welcome to Beautiful worlds !!</h1>
+<h1 th:text="${#strings.toUpperCase(Name)}"></h1>
+<!--<h1 th:text="${#strings.length(Name)}"></h1>-->
+<!--<h1 th:text="${Name}"></h1>-->
+<!--<h1>Hi my name is <span th:text ="${Name}"></span></h1>-->
+<h1>Enjoy the moment!</h1>
+
+<h1 th:text="${message}"></h1>
+
+<p>Flats available:</p>
+<ul>
+    <li th:each="item : ${items}" th:text="${item}"></li>
+</ul>
+<p th:text="'Current Year: ' + ${#dates.format(#dates.createNow(), 'yyyy')}"></p>
+</body>
+</html>
