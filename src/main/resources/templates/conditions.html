@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 >----------------------Elvis operator------------------------</h1>
+
+<h1 th:text="${#lists.size(list)} == '0' ? 'list is empty': 'list is not empty'"></h1>
+<h1 th:style ="${isActive} ? 'color:green' : 'color:red'"
+    th:text="${isActive} ? 'User is Active' : 'User is not active'"></h1>
+
+<h1>-----------------------------switch-----------------------------</h1>
+<div th:switch="${#lists.size(list)}">
+     <h1 th:case= "'0'"> list is empty</h1>
+     <h1 th:case= "'1'"> list have one element</h1>
+    <h1 th:case= "*"> list have multiple elements</h1>
+</div>
+<h1>---------------------------------if - unless---------------------</h1>
+<h1 th:if="${gender} == 'M'"> Male</h1>
+<h1 th:unless="${gender} =='M'"> Female</h1>
+
+</body>
+</html>

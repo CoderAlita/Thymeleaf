@@ -4,6 +4,8 @@ import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,4 +34,15 @@ public class HomeController {
 
         return "iter";
     }
+    @RequestMapping(value = "/condition" ,method = RequestMethod.GET)
+    public String condition(Model  model) {
+        model.addAttribute("isActive", "false");
+
+        model.addAttribute("gender", "F");
+
+        List<Integer> list = List.of(34,56,45,23);
+        model.addAttribute("list", list);
+        return "conditions";
+    }
+
 }
