@@ -54,5 +54,11 @@ public class HomeController {
         return "host";
     }
 
+    @GetMapping("/inherite")
+    public String inherit(Model model){
+
+        return "inherite";
+    }
+
 
 }
