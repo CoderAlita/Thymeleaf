@@ -9,17 +9,21 @@
 </head>
 <body>
 <h1>Replace</h1>
-<footer id="replace" th:replace="footer :: footer">
+<footer id="replace" th:replace="footer :: footer(${Heading},${date})">
 
 </footer>
+
+<h1>____________________________________________________________________________________________________</h1>
 
 <h1>Include</h1>
-<footer id="include" th:include="footer :: footer">
+<footer id="include" th:include="footer :: footer(${Heading},${date})">
 
 </footer>
 
+<h1>____________________________________________________________________________________________________</h1>
+
 <h1>Insert</h1>
-<footer id="insert" th:insert="footer :: footer">
+<footer id="insert" th:insert="footer :: footer(${Heading},${date})">
 
 </footer>
 

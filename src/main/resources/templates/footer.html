@@ -9,8 +9,12 @@
 </head>
 <body>
 
-<footer id ="fragment " th:fragment="footer">
+<footer id ="fragment " th:fragment="footer(Heading,date)">
     <div>
+
+        <h1 th:text="${Heading}"></h1>
+
+        <h1 th:text ="${date}"></h1>
         <h1>This is fragment tag</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur earum, fugiat ipsum laborum nihil omnis pariatur quam sapiente sint, tempora, temporibus voluptatibus. At commodi enim fugiat nisi obcaecati provident vel vitae, voluptates. Accusantium, amet beatae consequuntur ea eum impedit incidunt maxime nesciunt nisi, quia quisquam repellat repudiandae sint voluptatem?</p>
 
