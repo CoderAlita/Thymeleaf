@@ -45,4 +45,11 @@ public class HomeController {
         return "conditions";
     }
 
+    @GetMapping("/host")
+    public String host(Model model){
+
+        return "host";
+    }
+
+
 }
